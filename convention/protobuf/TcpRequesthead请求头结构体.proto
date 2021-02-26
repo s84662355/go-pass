@@ -1,0 +1,15 @@
+syntax = "proto3";
+ 
+ 
+package protocol;
+import  "convention/protobuf/TcpRequestEvent请求事件类型.proto";
+
+ 
+
+message TcpRequestHead {
+     string  machineCode = 1;
+     string sessionId = 2;
+      string date = 3;
+     RequestEvent type = 4;
+     bytes bodyBytes = 5;
+}

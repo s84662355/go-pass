@@ -1,0 +1,14 @@
+syntax = "proto3";
+ 
+ 
+package protocol;
+import  "convention/protobuf/TcpResponseEvent响应事件类型.proto";
+
+ 
+
+message TcpResponseHead {
+     string  host = 1;
+     string date = 2;
+     ResponseEvent type = 3;
+     bytes bodyBytes = 4;
+}

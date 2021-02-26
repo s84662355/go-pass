@@ -1,0 +1,17 @@
+syntax = "proto3";
+ 
+package protocol;
+ 
+enum ProtocolEvent{
+  Sescsdcrver = 0;
+  
+};
+
+
+message TcpExtraData {
+     string machineCode = 1;
+     string sessionId = 2;
+     ProtocolEvent type = 3;
+     string deviceId = 4;
+     string userId = 5;
+}

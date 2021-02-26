@@ -1,0 +1,18 @@
+{
+  "env": "local",
+  "redis_address": "127.0.0.1:6379",
+  "nsq_producer":[
+  	{
+	  	"name":"1111",
+	  	"address":"127.0.0.1:4150",
+    }
+  ],
+  "nsq_consumer":[
+  	{
+  		"name":"csdcds",
+  		"address":[
+  			"127.0.0.1:4161"
+  		]
+  	}
+  ],
+}

@@ -1,0 +1,22 @@
+{
+  "default_consumer": "111",
+  "default_producer": "111",
+  "nsq_consumer": {
+    "111": {
+      "name": "111",
+      "address": [
+        "127.0.0.1:4161"
+      ],
+      "topic": "test",
+      "channel": "1",
+      "concurrency": 50,
+      "maxAttempts": 2
+    }
+  },
+  "nsq_producer": {
+    "111": {
+      "name": "111",
+      "address": "127.0.0.1:4150"
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "default": "default",
+  "conns": {
+    "default": {
+      "address": "127.0.0.1",
+      "port": 11111,
+      "username": "",
+      "password": "",
+      "destination": "example",
+      "soTimeOut": 60000,
+      "idleTimeOut": 3600000,
+      "subscribe": "test\\.article"
+    },
+    "cate": {
+      "address": "127.0.0.1",
+      "port": 11111,
+      "username": "",
+      "password": "",
+      "destination": "cate",
+      "soTimeOut": 60000,
+      "idleTimeOut": 3600000,
+      "subscribe": "test\\.cate"
+    }
+
+  }
+}

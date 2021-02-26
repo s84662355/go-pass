@@ -1,0 +1,10 @@
+syntax = "proto3";
+ 
+package protocol;
+ 
+ 
+
+message TTTT {
+     string ssss  = 1;
+   
+}

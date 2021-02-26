@@ -1,0 +1,18 @@
+syntax = "proto3";
+ 
+package protocol;
+ 
+enum ProtocolTag{
+  Server = 0;
+  Client = 1;
+};
+ 
+
+message TcpProtocol {
+     string date = 1;
+     ProtocolTag tag=2;
+     string address = 3;
+     string eCode = 4;
+     bytes extraData = 5;
+     bytes bodyBytes = 6;
+}

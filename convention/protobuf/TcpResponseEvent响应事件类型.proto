@@ -1,0 +1,9 @@
+syntax = "proto3";
+package protocol;
+
+ 
+enum ResponseEvent{
+  LEFT11 = 0;
+};
+
+ 
