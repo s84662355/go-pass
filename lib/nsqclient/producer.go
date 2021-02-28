@@ -5,6 +5,7 @@ import (
 	_ "fmt"
 	"github.com/nsqio/go-nsq"
 	"sync"
+	
 )
 
 var nsqProducerMap sync.Map

@@ -10,7 +10,7 @@ import (
 
 var nsqConsumerMap sync.Map
 
-func InitConsumer(name string, handle func(message *nsq.Message) error) *nsq.Consumer {
+func InitConsumer(name string,topic, channel string,  handle func(message *nsq.Message) error) *nsq.Consumer {
 
 	config := nsqConfig.Config.NsqConsumer[name]
 	return NsqConsumer(name, config.Topic, config.Channel, config.Address, handle, config.Concurrency, config.MaxAttempts)
@@ -43,19 +43,10 @@ func NsqConsumer(name, topic, channel string, hosts []string, handle func(messag
 		panic(err)
 	}
 
-	nsqConsumerMap.Store(name, consumer)
+	//nsqConsumerMap.Store(name, consumer)
 
 	return consumer
 }
 
-func Consumer(name string) *nsq.Consumer {
-	consumer, _ := nsqConsumerMap.Load(name)
-	return consumer.(*nsq.Consumer)
-}
-
-func DisconnectConsumer() {
-	nsqConsumerMap.Range(func(key, value interface{}) bool {
-		defer value.(*nsq.Consumer).Stop()
-		return true
-	})
-}
+ 
+ 

@@ -13,8 +13,8 @@ var Config = config{
 		"default": {
 			Name:        "default",
 			Address:     []string{"127.0.0.1:4161"},
-			Topic:       "test",
-			Channel:     "1",
+	//		Topic:       "test",
+			//Channel:     "1",
 			Concurrency: 10,
 			MaxAttempts: 3,
 		},
